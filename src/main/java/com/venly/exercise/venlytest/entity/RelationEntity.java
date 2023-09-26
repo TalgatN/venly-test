@@ -6,12 +6,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity(name = "RELATIONS")
 @Getter
 @Setter
+@EqualsAndHashCode
 public class RelationEntity {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO, generator="relation_seq_gen")
